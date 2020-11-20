@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.ejercicioclasejetpack.menuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_calculadoraFragment"
+            app:destination="@id/calculadoraFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_camaraFragment"
+            app:destination="@id/camaraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculadoraFragment"
+        android:name="com.example.ejercicioclasejetpack.calculadoraFragment"
+        android:label="fragment_calculadora"
+        tools:layout="@layout/fragment_calculadora" >
+        <action
+            android:id="@+id/action_calculadoraFragment_to_sumarFragment"
+            app:destination="@id/sumarFragment" />
+        <action
+            android:id="@+id/action_calculadoraFragment_to_restarFragment"
+            app:destination="@id/restarFragment" />
+        <action
+            android:id="@+id/action_calculadoraFragment_to_dividirFragment"
+            app:destination="@id/dividirFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sumarFragment"
+        android:name="com.example.ejercicioclasejetpack.sumarFragment"
+        android:label="fragment_sumar"
+        tools:layout="@layout/fragment_sumar" >
+        <argument
+            android:name="n1"
+            app:argType="integer" />
+        <argument
+            android:name="n2"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/restarFragment"
+        android:name="com.example.ejercicioclasejetpack.restarFragment"
+        android:label="fragment_restar"
+        tools:layout="@layout/fragment_restar" >
+        <argument
+            android:name="n1"
+            app:argType="integer" />
+        <argument android:name="n2"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/dividirFragment"
+        android:name="com.example.ejercicioclasejetpack.dividirFragment"
+        android:label="fragment_dividir"
+        tools:layout="@layout/fragment_dividir" >
+        <argument
+            android:name="n1"
+            app:argType="integer" />
+        <argument
+            android:name="n2"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.ejercicioclasejetpack.webViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <action
+            android:id="@+id/action_webViewFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/camaraFragment"
+        android:name="com.example.ejercicioclasejetpack.camaraFragment"
+        android:label="fragment_camara"
+        tools:layout="@layout/fragment_camara" />
+</navigation>
